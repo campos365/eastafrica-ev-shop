@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>More Information | EastAfrica EV Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+    
+/* EASTAFRICA EV SHOP - PREMIUM DESIGN */
+
+:root {
+    --ev-green: #b7f34a;
+    --ev-black: #080a08;
+    --ev-card: #141714;
+    --ev-border: #2b3328;
+    --ev-white: #f5f7f2;
+    --ev-muted: #b5bcb1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--ev-black);
+    color: var(--ev-white);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 18px 6%;
+    background: rgba(8, 10, 8, 0.96);
+    border-bottom: 1px solid var(--ev-border);
+    backdrop-filter: blur(12px);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--ev-green);
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+header nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: var(--ev-white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 9px 12px;
+    border-radius: 6px;
+    transition: 0.25s;
+}
+
+header nav a:hover {
+    background: var(--ev-green);
+    color: var(--ev-black);
+}
+
+.information-page {
+    max-width: 1120px;
+    margin: auto;
+    padding: 48px 24px;
+}
+
+.information-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 28px;
+    text-align: center;
+    border: 1px solid #35402e;
+    border-radius: 22px;
+    background:
+        radial-gradient(ellipse at top right,
+            rgba(183, 243, 74, 0.18), transparent 50%),
+        linear-gradient(135deg, #171d15, #080a08 75%);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.information-hero::before {
+    content: "ELECTRIC MOBILITY";
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 7px 14px;
+    color: var(--ev-green);
+    border: 1px solid #52653c;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.information-hero h1 {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    color: var(--ev-white);
+    font-size: clamp(34px, 6vw, 62px);
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+}
+
+.information-hero h1 span {
+    color: var(--ev-green);
+}
+
+.information-hero p {
+    max-width: 680px;
+    margin: 0 auto 24px;
+    color: var(--ev-muted);
+    font-size: 17px;
+}
+
+.information-button {
+    display: inline-block;
+    margin: 10px 5px 0;
+    padding: 13px 22px;
+    background: var(--ev-green);
+    color: #10130d;
+    font-weight: 800;
+    text-decoration: none;
+    border: 1px solid var(--ev-green);
+    border-radius: 7px;
+    transition: transform 0.25s, background 0.25s;
+}
+
+.information-button:hover {
+    transform: translateY(-3px);
+    background: #d1ff83;
+}
+
+.information-section {
+    margin-top: 28px;
+    padding: 30px;
+    background: linear-gradient(145deg, #171b16, #101210);
+    border: 1px solid var(--ev-border);
+    border-radius: 16px;
+    transition: border-color 0.25s, transform 0.25s;
+}
+
+.information-section:hover {
+    border-color: #617b43;
+    transform: translateY(-2px);
+}
+
+.information-section h2 {
+    margin-top: 0;
+    color: var(--ev-green);
+    font-size: 25px;
+}
+
+.information-section p,
+.information-section li {
+    color: var(--ev-muted);
+    line-height: 1.9;
+}
+
+.information-section ul {
+    padding-left: 22px;
+}
+
+.information-section li {
+    margin: 8px 0;
+}
+
+.information-section li::marker {
+    color: var(--ev-green);
+}
+
+.information-footer {
+    margin-top: 35px;
+    padding: 30px 20px;
+    text-align: center;
+    color: var(--ev-muted);
+    border-top: 1px solid var(--ev-border);
+    background: #050605;
+}
+
+@media (max-width: 700px) {
+    header {
+        position: relative;
+        padding: 16px;
+    }
+
+    header h1 {
+        font-size: 19px;
+    }
+
+    header nav {
+        gap: 4px;
+    }
+
+    header nav a {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .information-page {
+        padding: 24px 14px;
+    }
+
+    .information-hero {
+        padding: 55px 18px;
+        border-radius: 14px;
+    }
+
+    .information-hero p {
+        font-size: 15px;
+    }
+
+    .information-section {
+        padding: 22px 18px;
+    }
+
+    .information-section h2 {
+        font-size: 21px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>EastAfrica EV Shop</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#products">Products</a>
+            <a href="more-information.html">More Information</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#contact">Contact Us</a>
+        </nav>
+    </header>
+
+    <main class="information-page">
+
+        <section class="information-hero">
+            <h1>Discover Electric Mobility</h1>
+
+            <p>
+                Welcome to EastAfrica EV Shop, your destination
+                for exploring modern electric scooters and bikes.
+                Discover practical mobility options and contact
+                our team to learn more about the vehicles we offer.
+            </p>
+
+            <a href="index.html#products" class="information-button">
+                Explore Our Products
+            </a>
+        </section>
+
+        <section class="information-section">
+            <h2>About Our Electric Vehicles</h2>
+
+            <p>
+                Electric scooters and bikes offer an alternative
+                way to travel for daily activities, personal
+                transport and other mobility needs. Our shop helps
+                customers explore available models and choose an
+                option that suits their requirements.
+            </p>
+
+            <p>
+                Contact us for information about individual
+                vehicles, specifications, prices and availability.
+            </p>
+        </section>
+
+        <section class="information-section">
+            <h2>Why Explore Electric Scooters and Bikes?</h2>
+
+            <ul>
+                <li>Convenient transportation for everyday journeys.</li>
+                <li>Modern designs and different model options.</li>
+                <li>Electric-powered mobility.</li>
+                <li>Options to suit different customer needs.</li>
+                <li>Direct communication with our sales team.</li>
+            </ul>
+        </section>
+
+        <section class="information-section">
+            <h2>Vehicle Features and Specifications</h2>
+
+            <p>
+                Every model may have different specifications.
+                Before purchasing, ask us about maximum speed,
+                battery capacity, estimated riding range,
+                charging time, load capacity and warranty, where
+                applicable.
+            </p>
+
+            <p>
+                Actual performance depends on the vehicle model,
+                battery condition, rider weight, road conditions
+                and other factors.
+            </p>
+        </section>
+
+        <section class="information-section">
+            <h2>Prices and Availability</h2>
+
+            <p>
+                Prices and stock availability may vary by model.
+                Contact EastAfrica EV Shop to confirm the current
+                price, available colours, specifications and
+                delivery arrangements.
+            </p>
+
+            <a href="index.html#products" class="information-button">
+                View Available Models
+            </a>
+        </section>
+
+        <section class="information-section">
+            <h2>Contact Us on WhatsApp</h2>
+
+            <p>
+                Have a question about a scooter or electric bike?
+                Send us a message for more information about our
+                products and purchasing options.
+            </p>
+
+            <a
+                href="https://wa.me/250728480775"
+                class="information-button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Chat with Us on WhatsApp
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="information-footer">
+        <p>&copy; 2026 EastAfrica EV Shop. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

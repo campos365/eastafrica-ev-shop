@@ -1,0 +1,1238 @@
+/* GENERAL SETTINGS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: #102a43;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #d9eaf7;
+}
+
+/* NAVIGATION MENU */
+nav {
+    background-color: #0b1f33;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #38d9a9;
+}
+
+/* HOME SECTION */
+.hero {
+    background: linear-gradient(135deg, #102a43, #087f8c);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* BUTTONS */
+.button,
+button {
+    display: inline-block;
+    background-color: #20c997;
+    color: #102a43;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover,
+button:hover {
+    background-color: #12a77c;
+    color: white;
+}
+
+/* GENERAL SECTIONS */
+section:not(.hero) {
+    padding: 45px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #102a43;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+/* PRODUCTS */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.product {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    background-color: #e5f4f3;
+    border-radius: 10px;
+    font-size: 75px;
+    padding: 25px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    color: #102a43;
+    margin-bottom: 10px;
+}
+
+.product p {
+    margin-bottom: 12px;
+}
+
+.price {
+    color: #087f8c;
+    font-weight: bold;
+}
+
+/* ABOUT AND CONTACT */
+#about,
+#contact {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#about p,
+#contact p {
+    margin-bottom: 12px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #102a43;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+    margin-top: 25px;
+}
+
+/* MOBILE PHONE SETTINGS */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 25px;
+    }
+
+    .hero {
+        padding: 55px 15px;
+    }
+
+    .hero h2 {
+        font-size: 29px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    section:not(.hero) {
+        padding: 30px 15px;
+    }
+}
+.product-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+}
+
+/* PRODUCT DETAILS MODAL */
+
+.product .view-details {
+    display: inline-block;
+    margin: 8px 5px 0;
+    background-color: #102a43;
+    color: white;
+}
+
+.product .view-details:hover {
+    background-color: #087f8c;
+}
+
+.product-details-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.product-details-modal.active {
+    display: flex;
+}
+
+.product-details-content {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: white;
+    border-radius: 14px;
+    padding: 25px;
+    text-align: center;
+}
+
+.product-details-content img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-details-content h2 {
+    color: #102a43;
+    margin-bottom: 12px;
+}
+
+.product-details-content p {
+    margin-bottom: 12px;
+}
+
+.product-details-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 28px;
+    background: transparent;
+    color: #102a43;
+    padding: 2px 10px;
+}
+
+.product-details-close:hover {
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .product-details-content {
+        padding: 18px;
+    }
+
+    .product-details-content img {
+        height: 220px;
+    }
+}
+
+/* SINGLE IMAGE SLIDER */
+
+#bike-gallery {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.bike-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 850px;
+    margin: 0 auto 20px;
+}
+
+.bike-slide {
+    flex: 1;
+    min-width: 0;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.bike-slide img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.bike-slide h3 {
+    margin-top: 15px;
+    color: #102a43;
+}
+
+#bikeSlideCounter {
+    margin-top: 8px;
+    color: #087f8c;
+    font-weight: bold;
+}
+
+#previousBike,
+#nextBike {
+    flex-shrink: 0;
+    padding: 12px;
+}
+
+#bikeEnquire {
+    margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+    .bike-slider {
+        gap: 6px;
+    }
+
+    .bike-slide {
+        padding: 8px;
+    }
+
+    .bike-slide img {
+        height: 220px;
+    }
+
+    #previousBike,
+    #nextBike {
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+}
+
+/* ELECTRIC VEHICLES IMAGE SLIDER */
+#gallery {
+    padding: 45px 20px;
+    text-align: center;
+}
+
+#gallery h2 {
+    color: #102a43;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.slide-container {
+    flex: 1;
+    min-width: 0;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+#gallery-image {
+    display: block;
+    width: 100%;
+    height: 380px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+#gallery-caption {
+    margin-top: 10px;
+    color: #102a43;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .slider {
+        gap: 8px;
+    }
+
+    .slider button {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    #gallery-image {
+        height: 230px;
+    }
+}
+
+/* BLACK SPORT SCOOTER DETAILS */
+.scooter-details {
+    padding: 40px 20px;
+    margin: 30px auto;
+    max-width: 900px;
+    text-align: center;
+    background: #f7f9fc;
+    border-radius: 12px;
+}
+
+.scooter-details h2 {
+    color: #102a43;
+    margin-bottom: 10px;
+}
+
+.scooter-subtitle {
+    color: #526579;
+    margin-bottom: 25px;
+}
+
+.scooter-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.scooter-gallery button {
+    cursor: pointer;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #102a43;
+    color: white;
+}
+
+.scooter-photo-card {
+    flex: 1;
+    min-width: 0;
+}
+
+#black-scooter-photo {
+    width: 100%;
+    max-width: 480px;
+    height: 420px;
+    object-fit: contain;
+    background: white;
+    border-radius: 10px;
+}
+
+#black-scooter-counter {
+    color: #102a43;
+    font-weight: bold;
+}
+
+.scooter-feature-list {
+    display: inline-block;
+    max-width: 650px;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.scooter-note {
+    color: #526579;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .scooter-details {
+        padding: 25px 12px;
+    }
+
+    .scooter-gallery {
+        gap: 6px;
+    }
+
+    .scooter-gallery button {
+        padding: 10px;
+    }
+
+    #black-scooter-photo {
+        height: 280px;
+    }
+}
+
+/* ==========================================
+   EASTAFRICA EV SHOP
+   SPORT BLACK THEME
+   ========================================== */
+
+:root {
+    --sport-black: #090909;
+    --sport-dark: #141414;
+    --sport-card: #1b1b1b;
+    --sport-green: #b7f34a;
+    --sport-white: #ffffff;
+    --sport-muted: #b8b8b8;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    background: var(--sport-black);
+    color: var(--sport-white);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* HEADER */
+header {
+    background: #050505;
+    color: var(--sport-white);
+    text-align: center;
+    padding: 30px 20px 24px;
+    border-bottom: 1px solid #292929;
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header h1::first-letter {
+    color: var(--sport-green);
+}
+
+header p {
+    margin: 6px 0 0;
+    color: var(--sport-muted);
+}
+
+/* NAVIGATION */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    padding: 15px 20px;
+    background: rgba(10, 10, 10, 0.96);
+    border-bottom: 1px solid #292929;
+}
+
+nav a {
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--sport-green);
+}
+
+/* MAIN SECTIONS */
+main {
+    width: 100%;
+}
+
+#home,
+#gallery,
+#products,
+#about,
+#contact {
+    scroll-margin-top: 85px;
+}
+
+#gallery,
+#products,
+#about,
+#contact {
+    padding: 55px 5%;
+}
+
+#gallery h2,
+#products h2,
+#about h2,
+#contact h2 {
+    color: var(--sport-white);
+    text-align: center;
+    font-size: clamp(25px, 3vw, 34px);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+}
+
+#gallery h2::after,
+#products h2::after,
+#about h2::after,
+#contact h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    background: var(--sport-green);
+    margin: 12px auto 0;
+    border-radius: 4px;
+}
+
+/* HERO */
+.hero {
+    min-height: 390px;
+    padding: 75px 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at 50% 100%, #252d18 0%, transparent 55%),
+        linear-gradient(135deg, #191919, #050505 70%);
+    border-bottom: 1px solid #292929;
+}
+
+.hero h2 {
+    color: var(--sport-white);
+    font-size: clamp(34px, 6vw, 62px);
+    line-height: 1.1;
+    font-weight: 900;
+    text-transform: uppercase;
+    max-width: 850px;
+    margin: 0 0 18px;
+}
+
+.hero p {
+    color: #c9c9c9;
+    font-size: 17px;
+    max-width: 600px;
+    margin: 0 0 28px;
+}
+
+/* BUTTONS */
+button,
+.button {
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid var(--sport-green);
+    border-radius: 6px;
+    padding: 12px 18px;
+    background: var(--sport-green);
+    color: #101010;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+button:hover,
+.button:hover {
+    background: transparent;
+    color: var(--sport-green);
+    transform: translateY(-2px);
+}
+
+/* PRODUCT GRID */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* PRODUCT CARDS */
+.product {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 16px;
+    overflow: hidden;
+    background: var(--sport-card);
+    border: 1px solid #303030;
+    border-radius: 12px;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    border-color: var(--sport-green);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+.product-image {
+    width: 100%;
+    height: 235px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.product:hover .product-image img {
+    transform: scale(1.04);
+}
+
+.product h3 {
+    color: var(--sport-white);
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 18px 0 8px;
+}
+
+.product p {
+    color: var(--sport-muted);
+    font-size: 14px;
+}
+
+.product .price {
+    color: var(--sport-green);
+    font-weight: 800;
+    margin-top: auto;
+}
+
+.product button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* GALLERY SLIDER */
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.slide-container {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    background: var(--sport-card);
+    border: 1px solid #303030;
+    border-radius: 12px;
+}
+
+#gallery-image {
+    display: block;
+    width: 100%;
+    height: 380px;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+#gallery-caption {
+    color: var(--sport-green);
+    text-align: center;
+    font-weight: 800;
+}
+
+/* PRODUCT DETAILS / GALLERY DETAILS */
+.scooter-details {
+    color: var(--sport-white);
+    background: var(--sport-dark);
+    border: 1px solid #303030;
+    border-radius: 12px;
+}
+
+.scooter-details h2,
+.scooter-details h3 {
+    color: var(--sport-white);
+}
+
+.scooter-details p,
+.scooter-details li {
+    color: #d0d0d0;
+}
+
+.scooter-details button {
+    margin: 6px;
+}
+
+/* ABOUT AND CONTACT */
+#about,
+#contact {
+    text-align: center;
+    border-top: 1px solid #242424;
+}
+
+#about p,
+#contact p {
+    max-width: 750px;
+    margin: 12px auto;
+    color: var(--sport-muted);
+}
+
+/* FOOTER */
+footer {
+    padding: 24px 20px;
+    background: #050505;
+    border-top: 1px solid #292929;
+    text-align: center;
+}
+
+footer p {
+    color: #a8a8a8;
+    font-size: 13px;
+}
+
+/* ACCESSIBILITY */
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--sport-green);
+    outline-offset: 4px;
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+    .product-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    #gallery,
+    #products,
+    #about,
+    #contact {
+        padding: 42px 4%;
+    }
+
+    .product-image {
+        height: 210px;
+    }
+}
+
+/* PHONES */
+@media (max-width: 600px) {
+    header {
+        padding: 24px 12px;
+    }
+
+    nav {
+        gap: 10px 16px;
+        padding: 12px 8px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 320px;
+        padding: 55px 18px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .product {
+        padding: 9px;
+        border-radius: 9px;
+    }
+
+    .product-image {
+        height: 155px;
+    }
+
+    .product h3 {
+        font-size: 15px;
+        margin-top: 12px;
+    }
+
+    .product p {
+        font-size: 12px;
+    }
+
+    .product button {
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+
+    .slider {
+        gap: 6px;
+    }
+
+    .slider button {
+        padding: 9px 8px;
+        font-size: 12px;
+    }
+
+    #gallery-image {
+        height: 240px;
+    }
+
+    .slide-container {
+        padding: 8px;
+    }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 360px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 220px;
+    }
+}
+
+/* FIXED SPORT SIDEBAR */
+.shop-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 245px;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 28px 18px;
+    background: #080808;
+    border-right: 1px solid #292929;
+    color: #fff;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    background: #b7f34a;
+    color: #080808;
+    border-radius: 8px;
+    font-weight: 900;
+}
+
+.shop-sidebar label {
+    color: #b7f34a;
+    font-size: 11px;
+    font-weight: 800;
+    margin-bottom: -14px;
+}
+
+#shop-search {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    background: #191919;
+    color: #fff;
+    border: 1px solid #383838;
+    border-radius: 7px;
+    outline: none;
+}
+
+#shop-search:focus {
+    border-color: #b7f34a;
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-links a {
+    display: block;
+    padding: 13px 12px;
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 7px;
+    transition: 0.2s;
+}
+
+.sidebar-links a:hover {
+    background: #202020;
+    color: #b7f34a;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    color: #aaa;
+    font-size: 12px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: #b7f34a;
+}
+
+/* Move website content beside sidebar */
+@media (min-width: 1000px) {
+    body {
+        padding-left: 245px;
+    }
+
+    .shop-sidebar {
+        width: 245px;
+    }
+}
+
+/* Mobile and tablet */
+@media (max-width: 999px) {
+    .shop-sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 16px;
+        gap: 14px;
+        border-right: none;
+        border-bottom: 1px solid #292929;
+    }
+
+    .sidebar-bottom {
+        margin-top: 0;
+    }
+
+    .sidebar-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar-links a {
+        padding: 10px;
+    }
+}
+
+/* FEATURED PRODUCTS ADVERTISEMENT */
+.featured-ad {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 370px;
+    margin: 25px auto;
+    padding: 50px 6%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid #35402e;
+    border-radius: 18px;
+    background:
+        radial-gradient(
+            ellipse at 85% 40%,
+            rgba(183, 243, 74, 0.18),
+            transparent 48%
+        ),
+        linear-gradient(120deg, #080a08, #171d15);
+}
+
+.featured-ad-content {
+    position: relative;
+    z-index: 2;
+    max-width: 620px;
+}
+
+.featured-badge {
+    display: inline-block;
+    padding: 7px 13px;
+    color: #b7f34a;
+    border: 1px solid #52653c;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.featured-ad h1 {
+    margin: 20px 0 12px;
+    color: #fff;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.1;
+}
+
+.featured-ad p {
+    max-width: 480px;
+    color: #c4c9c0;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.featured-ad-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.featured-btn {
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 800;
+    transition: 0.25s;
+}
+
+.primary-btn {
+    color: #080a08;
+    background: #b7f34a;
+}
+
+.secondary-btn {
+    color: #fff;
+    border: 1px solid #62685c;
+}
+
+.featured-btn:hover {
+    transform: translateY(-3px);
+}
+
+.primary-btn:hover {
+    background: #d1ff83;
+}
+
+.secondary-btn:hover {
+    color: #b7f34a;
+    border-color: #b7f34a;
+}
+
+.featured-ad-label {
+    position: absolute;
+    right: 6%;
+    bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    color: #89917f;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.featured-ad-label strong {
+    color: #b7f34a;
+    font-size: 15px;
+}
+
+@media (max-width: 650px) {
+    .featured-ad {
+        min-height: 340px;
+        margin: 15px 10px;
+        padding: 35px 22px 85px;
+    }
+
+    .featured-ad-label {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .featured-ad p {
+        font-size: 14px;
+    }
+}
+
+/* EV SHOP ADVERTISEMENT IMAGE */
+.featured-ad {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.65) 48%,
+            rgba(0, 0, 0, 0.15) 100%
+        ),
+        url("images/ev-banner.png") center / cover no-repeat;
+}
+.featured-ad {
+    background: url("./images/ev-banner.png") center center / cover no-repeat !important;
+}
+
+/* Adjust EV banner image position */
+.featured-ad {
+    background-position: right center !important;
+}
+
+.featured-ad-content {
+    text-align: left;
+    margin-left: 0;
+}

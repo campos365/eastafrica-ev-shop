@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EastAfrica EV Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>EastAfrica EV Shop</h1>
+        <p>Your Destination for Electric Mobility</p>
+    </header>
+
+    
+<!-- SPORT SIDEBAR -->
+<aside class="shop-sidebar">
+    <div class="sidebar-brand">
+        <span class="brand-mark">EA</span>
+        <span>EASTAFRICA<br>EV SHOP</span>
+    </div>
+
+    <label for="shop-search">SEARCH VEHICLES</label>
+    <input
+        type="search"
+        id="shop-search"
+        placeholder="Search scooter, bike..."
+        oninput="searchProducts()"
+    >
+
+    <nav class="sidebar-links" aria-label="Main sidebar">
+        <a href="#products">🏍️ Products</a>
+        <a href="more-information.html">🖼️ More Information</a>
+        <a href="#about">ℹ️ About Us</a>
+        <a href="#contact">✉️ Contact Us</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+        <span class="status-dot"></span>
+        Electric mobility for everyone
+    </div>
+</aside>
+
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <h2>Move Into the Future</h2>
+            <p>Discover mini vehicles and electric motorcycles.</p>
+            <a class="button" href="#products">Explore Products</a>
+        </section>
+
+        <!-- ADD THE GALLERY HERE -->
+<section id="gallery">
+    <h2>Our Electric Vehicles Gallery</h2>
+
+    <div class="slider">
+        <button type="button" onclick="changeSlide(-1)">
+            Previous
+        </button>
+
+        <div class="slide-container">
+            <img id="gallery-image"
+                 src="images/IMG_1531.PNG"
+                 alt="Electric vehicle 1">
+
+            <p id="gallery-caption">Electric Vehicle 1 of 5</p>
+
+            
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1547.PNG" alt="Electric Scooter">
+    </div>
+
+    <h3>Electric Scooter</h3>
+    <p>Convenient electric mobility for everyday travel.</p>
+    <p class="price">Contact for Price</p>
+
+    <button type="button" onclick="viewNewScooterDetails()">
+        View Details
+    </button>
+
+    <button type="button" onclick="contactUs('Electric Scooter')">
+        Enquire Now
+    </button>
+</article>
+
+
+<!-- NEW PRODUCT: BLACK SPORT SCOOTER -->
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1523.PNG" alt="Black Sport Scooter - New Version">
+    </div>
+
+    <h3>Black Sport Scooter — New Version</h3>
+    <p>Sporty design with a focus on improved riding performance.</p>
+    <p class="price">Contact for Price</p>
+
+    <button type="button" onclick="showBlackScooterDetails()">
+        View Details
+    </button>
+
+    <button type="button" onclick="contactUs('Black Sport Scooter — New Version')">
+        Enquire Now
+    </button>
+</article>
+
+
+        </div>
+
+        <button type="button" onclick="changeSlide(1)">
+            Next
+        </button>
+    </div>
+    <h3>Power Electric Scooter</h3>
+<p>Stylish electric mobility for everyday use.</p>
+<p class="price">Contact for Price</p>
+
+<button onclick="viewDetails('Power Electric Scooter', 'Stylish electric mobility for everyday use.')">
+    View Details
+</button>
+
+<!-- BLACK SPORT SCOOTER DETAILS -->
+<section id="black-scooter-details" class="scooter-details" hidden>
+    <h2>Black Sport Scooter — New Version</h2>
+    <p class="scooter-subtitle">Discover the updated sporty design.</p>
+
+    <div class="scooter-gallery">
+        <button type="button" onclick="changeBlackScooterPhoto(-1)"
+            aria-label="Previous photo">❮</button>
+
+        <div class="scooter-photo-card">
+            <img
+                id="black-scooter-photo"
+                src="images/IMG_1523.PNG"
+                alt="Black Sport Scooter photo 1"
+            >
+            <p id="black-scooter-counter">Photo 1 of 8</p>
+        </div>
+
+        <button type="button" onclick="changeBlackScooterPhoto(1)"
+            aria-label="Next photo">❯</button>
+    </div>
+
+    <h3>Features & Details</h3>
+    <ul class="scooter-feature-list">
+        <li><strong>New Version:</strong> Updated sporty styling.</li>
+        <li><strong>Improved Performance:</strong> Ask us for verified speed specifications.</li>
+        <li><strong>Everyday Riding:</strong> Designed for convenient daily travel.</li>
+        <li><strong>Hill Riding:</strong> Ability to climb hills depends on motor power, rider weight, and slope.</li>
+    </ul>
+
+    <p class="scooter-note">
+        Exact top speed, engine capacity, and hill performance can be confirmed
+        with the seller.
+    </p>
+
+    <button type="button"
+        onclick="contactUs('Black Sport Scooter — New Version')">
+        Enquire on WhatsApp
+    </button>
+</section>
+
+
+<button onclick="contactUs('Power Electric Scooter')">
+    Enquire Now
+</button>
+</section>
+<!-- END OF GALLERY -->
+
+
+<!-- FEATURED PRODUCTS ADVERTISEMENT -->
+<section class="featured-ad">
+    <div class="featured-ad-content">
+        <span class="featured-badge">ELECTRIC MOBILITY</span>
+
+        <h1>Ride Into The Future</h1>
+
+        <p>
+            Discover modern electric scooters and bikes
+            designed for your everyday journeys.
+        </p>
+
+        <div class="featured-ad-buttons">
+            <a href="#products" class="featured-btn primary-btn">
+                Explore Products
+            </a>
+
+            <a
+                href="https://wa.me/250728480775"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="featured-btn secondary-btn"
+            >
+                Ask on WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="featured-ad-label">
+        <span>DISCOVER</span>
+        <strong>YOUR NEXT RIDE</strong>
+    </div>
+</section>
+
+
+<section id="products">
+    <h2>Our Products</h2>
+        <section id="products">
+            <h2>Our Products</h2>
+
+            <div class="product-container">
+                <article class="product">
+
+<div class="product-image">
+    <img src="images/IMG_1487.JPG.jpeg"
+         alt="Green Electric Motorcycle">
+</div>
+                    <h3>Mini Electric Vehicle</h3>
+                    <p>Compact mobility for everyday use.</p>
+                    <p class="price">Contact for Price</p>
+                    <button onclick="contactUs('Mini Electric Vehicle')">
+                        Enquire Now
+                    </button>
+                </article>
+
+                
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1489.JPG.jpeg"
+             alt="Yellow Power Electric Scooter">
+    </div>
+
+    <h3>Power Electric Scooter</h3>
+    <p>Stylish electric mobility for everyday use.</p>
+    <p class="price">Contact for Price</p>
+
+    <button onclick="contactUs('Power Electric Scooter')">
+        Enquire Now
+    </button>
+</article>
+
+
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1485.JPG.jpeg"
+             alt="Black Electric Fat Tire Bike">
+    </div>
+
+    <h3>Black Electric Fat Tire Bike</h3>
+    <p>Powerful electric bike with fat tires, a comfortable seat, front suspension, and rear cargo rack.</p>
+    <p class="price">Contact for Price</p>
+
+    <button onclick="contactUs('Black Electric Fat Tire Bike')">
+        Enquire Now
+    </button>
+</article>
+
+
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1486.JPG.jpeg"
+             alt="NYRODE Electric Bike">
+    </div>
+
+    <h3>NYRODE Electric Bike</h3>
+    <p>Modern electric bike with a comfortable long seat and digital display.</p>
+    <p class="price">Contact for Price</p>
+
+    <button onclick="contactUs('NYRODE Electric Bike')">
+        Enquire Now
+    </button>
+</article>
+
+
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1489.JPG.jpeg"
+             alt="Yellow Power Electric Scooter">
+    </div>
+
+    <h3>Yellow Power Electric Scooter</h3>
+    <p>Stylish electric scooter with a comfortable seat and modern design.</p>
+    <p class="price">Contact for Price</p>
+
+    <button onclick="contactUs('Yellow Power Electric Scooter')">
+        Enquire Now
+    </button>
+</article>
+
+
+
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1491.JPG.jpeg"
+             alt="Red Electric Motorcycle">
+    </div>
+
+    <h3>Red Electric Motorcycle</h3>
+    <p>Sporty electric motorcycle with a stylish body and comfortable seating.</p>
+    <p class="price">Contact for Price</p>
+
+    <button onclick="contactUs('Red Electric Motorcycle')">
+        Enquire Now
+    </button>
+</article>
+
+
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1488.JPG.jpeg"
+             alt="Grey Electric Scooter">
+    </div>
+
+    <h3>Grey Electric Scooter</h3>
+    <p>Modern electric scooter with a comfortable seat and practical design for daily travel.</p>
+    <p class="price">Contact for Price</p>
+
+    <button onclick="contactUs('Grey Electric Scooter')">
+        Enquire Now
+    </button>
+</article>
+
+
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1501.JPG.jpeg"
+             alt="TVS Apache Motorcycle">
+    </div>
+
+    <h3>TVS Apache Motorcycle</h3>
+    <p>Sporty motorcycle with an aggressive design and stylish alloy wheels.</p>
+    <p class="price">Contact for Price</p>
+
+    <button onclick="contactUs('TVS Apache Motorcycle')">
+        Enquire Now
+    </button>
+</article>
+
+
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1494.JPG.jpeg"
+             alt="Blue Electric Scooter">
+    </div>
+
+    <h3>Blue Electric Scooter</h3>
+    <p>Elegant blue electric scooter with a comfortable seat and modern styling.</p>
+    <p class="price">Contact for Price</p>
+
+    <button onclick="contactUs('Blue Electric Scooter')">
+        Enquire Now
+    </button>
+</article>
+
+
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1481.JPG.jpeg"
+             alt="Red Mobility Scooter">
+    </div>
+
+    <h3>Red Mobility Scooter</h3>
+    <p>Comfortable mobility scooter with an adjustable seat, armrests and easy-to-use controls.</p>
+    <p class="price">Contact for Price</p>
+
+    <button onclick="contactUs('Red Mobility Scooter')">
+        Enquire Now
+    </button>
+</article>
+
+
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1499.JPG.jpeg"
+             alt="Black Electric Fat Tire Bike">
+    </div>
+
+    <h3>Black Electric Fat Tire Bike</h3>
+    <p>Rugged electric bike with wide tires and a sturdy frame for versatile riding.</p>
+    <p class="price">Contact for Price</p>
+
+    <button onclick="contactUs('Black Electric Fat Tire Bike')">
+        Enquire Now
+    </button>
+</article>
+
+
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1479.JPG.jpeg"
+             alt="White Electric Scooter">
+    </div>
+
+    <h3>White Electric Scooter</h3>
+    <p>Clean and modern electric scooter with a comfortable seat and practical design.</p>
+    <p class="price">Contact for Price</p>
+
+    <button onclick="contactUs('White Electric Scooter')">
+        Enquire Now
+    </button>
+</article>
+
+
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1495.JPG.jpeg"
+             alt="Red Electric Scooter">
+    </div>
+
+    <h3>Red Electric Scooter</h3>
+    <p>Stylish red electric scooter designed for comfortable everyday mobility.</p>
+    <p class="price">Contact for Price</p>
+
+    <button onclick="contactUs('Red Electric Scooter')">
+        Enquire Now
+    </button>
+</article>
+
+
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1484.JPG.jpeg"
+             alt="Black Electric Motorcycle">
+    </div>
+
+    <h3>Black Electric Motorcycle</h3>
+    <p>Modern black motorcycle with a bold design, round headlight and comfortable seat.</p>
+    <p class="price">Contact for Price</p>
+
+    <button onclick="contactUs('Black Electric Motorcycle')">
+        Enquire Now
+    </button>
+</article>
+
+
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1490.JPG.jpeg"
+             alt="Burgundy Electric Scooter">
+    </div>
+
+    <h3>Burgundy Electric Scooter</h3>
+    <p>Elegant burgundy scooter with a comfortable seat and attractive body design.</p>
+    <p class="price">Contact for Price</p>
+
+    <button onclick="contactUs('Burgundy Electric Scooter')">
+        Enquire Now
+    </button>
+</article>
+
+
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1496.JPG.jpeg"
+             alt="Electric Motorcycle">
+    </div>
+
+    <h3>Electric Motorcycle</h3>
+    <p>Modern electric motorcycle with a sleek body, comfortable seating and stylish design.</p>
+    <p class="price">Contact for Price</p>
+
+    <button onclick="contactUs('Electric Motorcycle')">
+        Enquire Now
+    </button>
+</article>
+
+
+<!-- Green Electric Scooter -->
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1483.JPG.jpeg"
+             alt="Green Electric Scooter">
+    </div>
+    <h3>Green Electric Scooter</h3>
+    <p>Modern electric scooter for everyday mobility.</p>
+    <p class="price">Contact for Price</p>
+    <button onclick="contactUs('Green Electric Scooter')">
+        Enquire Now
+    </button>
+</article>
+
+<!-- Purple Electric Motorcycle -->
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1497.JPG.jpeg"
+             alt="Purple Electric Motorcycle">
+    </div>
+    <h3>Purple Electric Motorcycle</h3>
+    <p>Stylish electric motorcycle for daily travel.</p>
+    <p class="price">Contact for Price</p>
+    <button onclick="contactUs('Purple Electric Motorcycle')">
+        Enquire Now
+    </button>
+</article>
+
+
+<section id="new-scooter-details" style="display: none; padding: 30px 20px; text-align: center;">
+    <h2>Electric Scooter Details</h2>
+
+    <div class="scooter-gallery">
+        <button type="button" onclick="changeNewScooterImage(-1)">Previous</button>
+
+        <img
+            id="new-scooter-image"
+            src="images/IMG_1547.PNG"
+            alt="Electric Scooter"
+            style="width: 70%; max-width: 500px; height: 300px; object-fit: contain;"
+        >
+
+        <button type="button" onclick="changeNewScooterImage(1)">Next</button>
+    </div>
+
+    <p id="new-scooter-counter">Photo 1 of 5</p>
+
+    <h3>Features</h3>
+    <p>Designed for everyday travel and convenient electric mobility.</p>
+    <p>Riding range depends on battery capacity and riding conditions.</p>
+    <p>Hill-climbing ability depends on motor power, rider weight, and slope.</p>
+    <p>Rechargeable battery for daily use.</p>
+
+    <button type="button" onclick="contactUs('Electric Scooter')">
+        Enquire on WhatsApp
+    </button>
+</section>
+
+
+
+
+<!-- V8 Electric Bike -->
+<article class="product">
+    <div class="product-image">
+        <img src="images/IMG_1480.JPG.jpeg"
+             alt="V8 Electric Bike">
+    </div>
+    <h3>V8 Electric Bike</h3>
+    <p>Bold electric bike with a distinctive design.</p>
+    <p class="price">Contact for Price</p>
+    <button onclick="contactUs('V8 Electric Bike')">
+        Enquire Now
+    </button>
+</article>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>
+                We aim to connect customers with modern electric
+                vehicles and motorcycles across East Africa.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Interested in a vehicle? Contact our sales team.</p>
+            <p>Email: niyojustin29@gmail.com</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EastAfrica EV Shop. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
